@@ -6,14 +6,22 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   </head>
 
   <body>
+    <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.2)), url(<%= image_path "banner_img.jpg" %>);">
+  <div class="container">
+    <h1> Mister Cocktail</h1>
+    <p>Get more ideas : drink  <strong> more  </strong></p>
+  </div>
+</div>
+
+<div class="container">
     <%= yield %>
-  <%= javascript_include_tag "application" %>
+</div>
   <%= javascript_pack_tag "application" %>
+  <%= javascript_include_tag "application" %>
   </body>
 </html>
